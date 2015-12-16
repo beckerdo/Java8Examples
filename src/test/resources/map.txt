@@ -1,0 +1,11 @@
+// This is a comment
+key0=valueA
+key1=valueB
+key2=valueC
+key3=valueD
+key4=valueE
+key5=valueF
+key6=valueG
+key7=valueH
+key8=valueI
+key9=valueJ
