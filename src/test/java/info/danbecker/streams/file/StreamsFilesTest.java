@@ -45,8 +45,9 @@ public class StreamsFilesTest {
 	@Test
 	public void testRegExFilter() {		
 		// Read file into stream, try-with-resources
-		try (Stream<String> lines = Files.lines(Paths.get(fileName))) {
+		try (Stream<String> lines = Files.lines(Paths.get(fileName)) ) {
 			Map<String,String> map = lines
+				.parallel()
 			    .map(text -> regEx.matcher(text))
 				.filter(matcher -> matcher.matches())
 				// .forEach(matcher -> System.out.format("key=%s, value=%s\n", matcher.group("key"), matcher.group("value") ));
